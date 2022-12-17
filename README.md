@@ -15,8 +15,19 @@ Running the deployment:
 ->Deploy template
 
      az deployment group create --resource-group $resourceGroupName --template-file <PATH-TO-aks.JSON> --parameters <PATH-TO-aks.JSON> 
-  
-   
+     
+    
+A Kubernetes manifest file: "azure-vote.yaml" defines a cluster's desired state, such as which container images to run.
+
+This manifest includes two Kubernetes deployments:
+
+          The sample Azure Vote Python applications.
+          A Redis instance.
+          
+Two Kubernetes Services are also created:
+
+          An internal service for the Redis instance.
+          An external service to access the Azure Vote application from the internet.
 
   
  
